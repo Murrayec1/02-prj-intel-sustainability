@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Hide details by default, show when .show-details is added */
+    .details {
+      display: none;
+      color: #0071c5;
+      font-size: 0.95em;
+      margin-left: 8px;
+    }
+
+    .read-more-btn {
+      background: #0071c5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 2px 10px;
+      margin-left: 8px;
+      cursor: pointer;
+      font-size: 0.95em;
+      transition: background 0.2s;
+    }
+
+    .read-more-btn:hover {
+      background: #005a8b;
+    }
+
+    /* Beginner-friendly: Make all album images bigger and show the whole image without cutting it off */
+    .timeline-card img {
+      width: 320px;         /* Make images bigger */
+      height: 200px;        /* Make images taller for more content */
+      object-fit: contain;  /* Show the whole image, even if there are borders */
+      display: block;       /* Remove extra space below images */
+      margin: 0 auto 16px auto; /* Center the image and add space below */
+      border-radius: 10px;  /* Rounded corners for a modern look */
+      border: 3px solid #0071c5; /* Blue border for consistency */
+      background: #f4faff;  /* Light background in case image is transparent */
+    }
+  </style>
 </head>
 <body>
 
@@ -32,6 +69,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Articles</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#fun-facts">Fun Facts</a></li> <!-- Added Fun Facts link -->
       </ul>
     </nav>
   </header>
@@ -45,11 +83,12 @@
         <h3>Intel Founded</h3>
         <img src="img/1.jpg" alt="Placeholder Image" />
         <p>
-          Robert Noyce and Gordon Moore rename the newly formed company 
-          NM Electronics to Intel Corporation, laying the foundation for 
-          decades of technological innovation.
+          Intel Corporation is founded by Robert Noyce and Gordon Moore.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            The company was originally named NM Electronics before becoming Intel. Their first office was in Mountain View, California. Intel’s early innovations in semiconductor memory and microprocessors would go on to transform the technology industry and lay the groundwork for modern computing.
+          </span>
         </p>
-        <span class="details">Intel’s first office was in Mountain View, California.</span>
       </div>
 
       <!-- Card 2: 1971 -->
@@ -58,11 +97,12 @@
         <h3>First Microprocessor</h3>
         <img src="img/2.jpg" alt="Placeholder Image" />
         <p>
-          Intel debuts the 4004, the world's first commercial microprocessor, 
-          igniting the microprocessor revolution and propelling the future 
-          of computing devices.
+          Intel introduces the 4004 microprocessor.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            The 4004 was the world’s first commercial microprocessor, containing 2,300 transistors and running at 740 kHz. This innovation sparked the microprocessor revolution, making it possible to build smaller, more powerful, and more affordable computers.
+          </span>
         </p>
-        <span class="details">The 4004 had 2,300 transistors.</span>
       </div>
 
       <!-- Card 3: 1978 -->
@@ -71,10 +111,12 @@
         <h3>8086 Processor</h3>
         <img src="img/3.jpg" alt="Placeholder Image" />
         <p>
-          Launch of the 8086 processor, establishing the x86 architecture 
-          that drives countless PCs and servers in the modern era.
+          The 8086 processor launches, starting the x86 era.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            The 8086 introduced a 16-bit architecture and became the foundation for the x86 family, which still powers most PCs today. The original 8086 ran at 5 MHz and was used in the first IBM PC.
+          </span>
         </p>
-        <span class="details">The original 8086 ran at 5 MHz.</span>
       </div>
 
       <!-- Card 4: 1985 -->
@@ -83,80 +125,121 @@
         <h3>386 Processor</h3>
         <img src="img/4.jpg" alt="Placeholder Image" />
         <p>
-          Intel introduces the 386 processor with 32-bit architecture, 
-          ushering in a new era of performance and multitasking for 
-          personal computers.
+          Intel launches the 386 processor.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            The 386 was Intel’s first 32-bit processor, enabling advanced multitasking and improved performance for personal computers. It also featured a built-in math coprocessor, which was a major step forward for computing power.
+          </span>
         </p>
-        <span class="details">It was the first Intel processor to feature a built-in math coprocessor.</span>
       </div>
 
       <!-- Card 5: 2006 -->
       <div class="timeline-card">
         <h2>2006</h2>
         <h3>Peak GHG Emissions</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+        <!-- Updated image source to 5.png -->
+        <img src="img/5.png" alt="Placeholder Image" />
         <p>
-          This year marks Intel's highest annual greenhouse gas emissions 
-          for operations. Over subsequent years, Intel invests heavily in 
-          chemical abatement, renewable energy, and energy-efficient 
-          manufacturing to reverse this trend.
+          Intel’s annual greenhouse gas emissions reach their highest point.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            After 2006, Intel invested heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reduce emissions. The company began voluntary greenhouse gas reporting in 1998, showing early leadership in environmental responsibility.
+          </span>
         </p>
-        <span class="details">Intel began its voluntary greenhouse gas reporting in 1998.</span>
       </div>
 
       <!-- Card 6: 2020 -->
       <div class="timeline-card">
         <h2>2020</h2>
         <h3>RISE Strategy</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+        <!-- Updated image source to 6.png -->
+        <img src="img/6.png" alt="Placeholder Image" />
         <p>
-          Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-          Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
+          Intel launches its RISE strategy and 2030 goals.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            RISE stands for Responsible, Inclusive, Sustainable, and Enabling. The strategy focuses on climate action, water stewardship, waste reduction, and industry-wide collaboration to drive progress on sustainability and social impact.
+          </span>
         </p>
-        <span class="details">The strategy emphasizes collaboration across the tech industry.</span>
       </div>
 
       <!-- Card 7: 2022 -->
       <div class="timeline-card">
         <h2>2022</h2>
         <h3>Net-Zero By 2040</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+        <!-- Updated image source to 7.png -->
+        <img src="img/7.png" alt="Placeholder Image" />
         <p>
-          Intel announces its commitment to achieve net-zero greenhouse 
-          gas emissions (Scope 1 and 2) across its global operations 
-          by 2040, building on years of environmental initiatives.
+          Intel commits to net-zero greenhouse gas emissions by 2040.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            The goal covers Scope 1 and 2 emissions, which include those from Intel’s own operations and energy use. This builds on years of environmental initiatives and sets a new standard for the tech industry.
+          </span>
         </p>
-        <span class="details">Scope 1 and 2 emissions include those from Intel's own operations and energy use.</span>
       </div>
 
       <!-- Card 8: 2023 -->
       <div class="timeline-card">
         <h2>2023</h2>
         <h3>Renewable Electricity</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+        <!-- Updated image source to 8.png -->
+        <img src="img/8.png" alt="Placeholder Image" />
         <p>
-          The company achieves 99% renewable electricity usage worldwide, 
-          helping to drastically lower carbon emissions and driving progress 
-          toward Intel's long-term sustainability goals.
+          Intel achieves 99% renewable electricity usage worldwide.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            This milestone helps drastically lower carbon emissions and supports Intel’s long-term sustainability goals. The company’s renewable energy sources include wind, solar, and hydropower.
+          </span>
         </p>
-        <span class="details">Intel's renewable energy sources include wind, solar, and hydropower.</span>
       </div>
 
       <!-- Card 9: 2024 -->
       <div class="timeline-card">
         <h2>2024</h2>
         <h3>Sustainability Summit</h3>
-        <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+        <!-- Updated image source to 9.png -->
+        <img src="img/9.png" alt="Placeholder Image" />
         <p>
-          Intel hosts its first Sustainability Summit, uniting suppliers, 
-          government officials, and industry leaders to collaborate on 
-          next-generation sustainable semiconductor manufacturing.
+          Intel hosts its first Sustainability Summit.
+          <button class="read-more-btn" onclick="toggleDetails(this)">Read more</button>
+          <span class="details">
+            The summit brings together suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing and accelerate progress toward a circular economy in the tech industry.
+          </span>
         </p>
-        <span class="details">The summit aims to accelerate progress towards a circular economy in the tech industry.</span>
       </div>
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div>
+      <strong>Intel Sustainability Project</strong> &copy; 2025<br>
+      Created by Emerald Murray, Global Accelerator<br>
+      <span class="footer-links">
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Simple function to show/hide details
+    function toggleDetails(btn) {
+      var details = btn.nextElementSibling;
+      if (details.style.display === "inline") {
+        details.style.display = "none";
+        btn.textContent = "Read more";
+      } else {
+        details.style.display = "inline";
+        btn.textContent = "Read less";
+      }
+    }
+
+    // Initialize details to be hidden
+    document.querySelectorAll('.details').forEach((details) => {
+      details.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
